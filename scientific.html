@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific</title>
+</head>
+<script>
+    function side() {
+        document.getElementById('sidebar').style = "left:0vw";
+        document.getElementById('sidemenu').style = "display:none";
+        document.getElementById('num').style = "opacity:0.2;transition:0.4s";
+        document.getElementById('display').style = "opacity:0.3;transition:0.4s";
+    }
+    function cross() {
+        document.getElementById('sidebar').style = "left:-100vw";
+        document.getElementById('sidemenu').style = "display:content;transition:0.35s ease-in-out";
+        document.getElementById('num').style = "opacity:1";
+        document.getElementById('display').style = "opacity:1;transition:0.4s";
+    }
+    function runBack() {
+
+            document.case.display.value -= "2";
+        };
+</script>
+<style>
+    body {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    @media screen and (max-width:770px) {
+        .textbox {
+            position: relative;
+            height: 170vw;
+            width: 99vw;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+
+        #display {
+            position: absolute;
+            top: 0vw;
+            width: 75vw;
+            padding: 9vw;
+            margin: 3vw;
+            color: black;
+            font-weight: bold;
+            font-size: 9vw;
+            background-color: rgba(206, 206, 206, 0.637);
+            border: none;
+            text-align: center;
+            overflow:scroll;
+        }
+
+        .sidemenu {
+            position: absolute;
+            top: 5vw;
+            left: 5vw;
+            height: 7vw;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .num {
+            position: absolute;
+            padding: 3vw;
+            top: 35vw;
+        }
+
+        button {
+            padding: 0vw;
+            margin: 1vw;
+            height: 16vw;
+            /*31*/
+            width: 11vw;
+            font-weight: bold;
+            font-size: 6vw;
+            border-radius: 1vw;
+            background-color: rgba(238, 238, 238, 0.445);
+        }
+
+        .sidebar {
+            position: absolute;
+            height: 162vw;
+            width: 70vw;
+            left: -100vw;
+            top: 2vw;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            z-index: +1;
+            transition: 0.35s ease;
+            overflow: scroll;
+        }
+
+        .cross {
+            position: absolute;
+            top: 2.5vw;
+            left: 5vw;
+            height: 7vw;
+            background-color: white;
+            padding: 3px;
+            ;
+            border: none;
+        }
+
+        nav a {
+            font-size: 4.5vw;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+            padding-left: 10vw;
+            text-align: center;
+            float: center;
+        }
+
+        .option a {
+            text-decoration: none;
+            color: black;
+            transition: 0.1s ease-in-out;
+        }
+
+        h3 {
+            font-family: sans-serif;
+            font-size: 6vw;
+            border: 1px solid black;
+            padding: 1.5vw;
+            width: 33vw;
+            margin-left: 1vw;
+            border-radius: 1vw;
+            color: white;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.733);
+            background-color: rgba(0, 0, 0, 0.719);
+        }
+
+        .option a:hover {
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+            font-size: 4.9vw;
+        }
+    }
+</style>
+
+<body>
+    <div class="textbox">
+        <div class="">
+            <input type="text" id="display" name="screen" value="" placeholder="Enter..." disabled>
+        </div>
+        <div class="nav">
+            <img onclick="side()" src="menu.png" class="sidemenu" id="sidemenu">
+        </div>
+        <br>
+        <div class="num" id="num">
+            <table class="but">
+                
+                <tr>
+                    <button name="seven" value="sin" onclick="display.value = Math.sin(display.value)">sin</button>
+                    <button name="eight" value="cos" onclick="display.value = Math.cos(display.value)">cos</button>
+                    <button name="seven" value="7" onclick="display.value += '7'">7</button>
+                    <button name="eight" value="8" onclick="display.value += '8'">8</button>
+                    <button name="nine" value="9" onclick="display.value += '9'">9</button>
+                    <button name="oparator" value="+" onclick="display.value += '+'">+</button>
+                    <button name="one" value="1" onclick="display.value += '('">(</button>
+                </tr><br>
+                <tr>
+                    <button name="seven" value="tan" onclick="display.value = Math.tan(display.value)">tan</button>
+                    <button name="eight" value="π" onclick="display.value +=3.14">π</button>
+                    <button name="four" value="4" onclick="display.value += '4'">4</button>
+                    <button name="five" value="5" onclick="display.value += '5'">5</button>
+                    <button name="six" value="6" onclick="display.value += '6'">6</button>
+                    <button name="oparator" value="-" onclick="display.value += '-'">-</button>
+                    <button name="two" value="2" onclick="display.value += ')'">)</button>
+                </tr><br>
+                <tr>
+                    <button name="seven" value="log" onclick="display.value = Math.log((display.value))">log</button>
+                    <button name="eight" value="-n" onclick="display.value = -((display.value))">-n</button>
+                    <button name="one" value="1" onclick="display.value += '1'">1</button>
+                    <button name="two" value="2" onclick="display.value += '2'">2</button>
+                    <button name="three" value="3" onclick="display.value += '3'">3</button>
+                    <button name="oparator" value="*" onclick="display.value += '*'">*</button>
+                    <button name="three" value="3" onclick="display.value = Math.exp(display.value)">e<sup>x</sup></button>
+                </tr><br>
+                <tr>
+                    <button name="seven" value="squre" onclick="display.value = Math.pow((display.value,2))">x<sup>2</sup></button>
+                    <button name="eight" value="sinh" style="font-size: 4.05vw;" onclick="display.value =Math.sinh(display.value)">sinh</button>
+                    <button name="one" value="1" onclick="display.value = Math.sinh(display.value)" style="font-size: 4.5vw;">cosh</button>
+                    <button name="two" value="2" onclick="display.value = Math.sinh(display.value)" style="font-size: 4.5vw;">tanh</button>
+                    <button name="three" value="3" style="font-size: 4.5vw;" onclick="display.value =1/Math.tan(display.value)">cot</button>
+                    <button name="oparator" value="*" style="font-size: 4.5vw;" onclick="display.value = 1/Math.sin(display.value)">cec</button>
+                    <button name="three" value="3" style="font-size: 4.5vw;" onclick="display.value =1/Math.cos(display.value)">sec</button>
+                </tr><br>
+                <tr>
+                    <button name="seven" value="root" onclick="display.value = Math.sqrt(display.value)">√</button>
+                    <button name="eight" value="8" onclick="display.value = Math.pow(10,display.value)">10<sup>y</sup></button>
+                    <button name="Cancal" value="C" onclick="display.value =''" style="background-color:rgba(255, 0, 0, 0.753)">C</button>
+                    <button name="zero" value="0" onclick="display.value += '0'">0</button>
+                    <button name="dot" value="." onclick="display.value += '.'">.</button>
+                    <button name="oparator" value="*" onclick="display.value += '/'">÷</button>
+                    <button name="equal" value="=" onclick="display.value = eval(display.value)">=</button>
+                </tr>
+                
+                
+            </table>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <img onclick="cross()" src="cross.png" id="cross" class="cross">
+            <br><br><br>
+            <nav id="option" class="option">
+                <hr>                <h3>Calculator</h3>
+                <a href="calculator.html">Standerd</a>
+                <hr><br>
+                <a href="scientific.html" style="font-size:5.5vw;color:royalblue">Scientific</a>
+                <hr><br>
+                <a href="soon.html">Programmer</a>
+                <hr><br>
+                <a href="soon.html">Date Calculation</a>
+                <hr>
+                <h3>Converter</h3>
+                <a href="soon.html">Currency</a>
+                <hr><br>
+                <a href="soon.html">Volume</a>
+                <hr><br>
+                <a href="soon.html">Length</a>
+                <hr><br>
+                <a href="soon.html">Weight and Mass</a>
+                <hr><br>
+                <a href="soon.html">Tempereture</a>
+                <hr><br>
+                <a href="soon.html">Energy</a>
+                <hr><br>
+                <a href="soon.html">Area</a>
+                <hr><br>
+                <a href="soon.html">Speed</a>
+                <hr><br>
+                <a href="soon.html">Time</a>
+                <hr><br>
+                <a href="soon.html">Power</a>
+                <hr><br>
+                <a href="soon.html">Data</a>
+                <hr><br>
+                <a href="soon.html">Pressure</a>
+                <hr><br>
+                <a href="soon.html">Angle</a>
+                <hr><br>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>
