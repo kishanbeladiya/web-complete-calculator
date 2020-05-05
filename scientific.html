@@ -9,14 +9,14 @@
     function side() {
         document.getElementById('sidebar').style = "left:0vw";
         document.getElementById('sidemenu').style = "display:none";
-        document.getElementById('num').style = "opacity:0.2;transition:0.4s";
-        document.getElementById('display').style = "opacity:0.3;transition:0.4s";
+        document.getElementById('num').style = "opacity:0.2";
+        document.getElementById('display').style = "opacity:0.3";
     }
     function cross() {
         document.getElementById('sidebar').style = "left:-100vw";
-        document.getElementById('sidemenu').style = "display:content;transition:0.35s ease-in-out";
+        document.getElementById('sidemenu').style = "display:content";
         document.getElementById('num').style = "opacity:1";
-        document.getElementById('display').style = "opacity:1;transition:0.4s";
+        document.getElementById('display').style = "opacity:1";
     }
     function runBack() {
 
@@ -91,7 +91,7 @@
             border: none;
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
             z-index: +1;
-            transition: 0.35s ease;
+           
             overflow: scroll;
         }
 
